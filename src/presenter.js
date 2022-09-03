@@ -12,7 +12,7 @@ form.addEventListener("submit", (event) => {
   const firstNumber = Number.parseInt(first.value);
   const secondNumber = second.value;
 
-  div.innerHTML = /*div.innerHTML +*/ "<p> -Egreso Bs: " +firstNumber + " Descripcion: "+secondNumber + "</p>";
+  div.innerHTML = div.innerHTML + "<p> -Egreso Bs: " +firstNumber + " Descripcion: "+secondNumber + "</p>";
 });
 
 formIngreso.addEventListener("submit", (event) => {
@@ -21,5 +21,5 @@ formIngreso.addEventListener("submit", (event) => {
   const firstNumber = Number.parseInt(firstIngreso.value);
   const secondNumber = secondIngreso.value;  
 
-  div.innerHTML =  /*div.innerHTML +*/ "<p> -Ingreso Bs: " +firstNumber + " Descripcion: "+secondNumber + "</p>";
+  div.innerHTML =  div.innerHTML + "<p> -Ingreso Bs: " +firstNumber + " Descripcion: "+secondNumber + "</p>";
 });
