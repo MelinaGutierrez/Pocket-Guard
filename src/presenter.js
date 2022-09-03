@@ -1,25 +1,25 @@
-import sumar from "./sumador";
-import multiplicar from "./multiplicador";
-
-const first = document.querySelector("#primer-numero");
-const second = document.querySelector("#segundo-numero");
-const form = document.querySelector("#sumar-form");
-const form2 = document.querySelector("#multiplicar-form");
+const first = document.querySelector("#Monto");
+const second = document.querySelector("#Descripcion");
+const form = document.querySelector("#form-Egreso");
+/*const firstIngreso = document.querySelector("#MontoIngreso");
+const secondIngreso = document.querySelector("#DescripcionIngreso");
+const formIngreso = document.querySelector("#form-Ingreso");*/
 const div = document.querySelector("#resultado-div");
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
 
   const firstNumber = Number.parseInt(first.value);
-  const secondNumber = Number.parseInt(second.value);
+  const secondNumber = second.value;
 
-  div.innerHTML = "<p>" + sumar(firstNumber, secondNumber) + "</p>";
+  div.innerHTML = /*div.innerHTML +*/ "<p> -Egreso Bs: " +firstNumber + " Descripcion: "+secondNumber + "</p>";
 });
-form2.addEventListener("submit", (event) => {
+/*
+formIngreso.addEventListener("submit", (event) => {
   event.preventDefault();
 
-  const firstNumber = Number.parseInt(first.value);
-  const secondNumber = Number.parseInt(second.value);
+  const firstNumber = Number.parseInt(firstIngreso.value);
+  const secondNumber = secondIngreso.value;  
 
-  div.innerHTML = "<p>" + multiplicar(firstNumber, secondNumber) + "</p>";
-});
+  div.innerHTML = div.innerHTML + "<p> -Ingreso Bs: " +firstNumber + " Descripcion: "+secondNumber + "</p>";
+});*/
