@@ -8,6 +8,9 @@ const div = document.querySelector("#resultado-div");
 const formSumaEgreso = document.querySelector("#form-resultadoEgreso");
 const divSumaEgreso= document.querySelector("#resultadoEgreso-div")
 var sumEgresos=0;
+const formSumaIngreso = document.querySelector("#form-resultadoIngreso");
+const divSumaIngreso= document.querySelector("#resultadoIngreso-div")
+var sumIngresos=0;
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
@@ -24,8 +27,9 @@ formIngreso.addEventListener("submit", (event) => {
 
   const firstNumber = Number.parseInt(firstIngreso.value);
   const secondNumber = secondIngreso.value;  
-
+  sumIngresos= sumIngresos + firstNumber;
   div.innerHTML =  div.innerHTML + "<p> -Ingreso Bs: " +firstNumber + " Descripcion: "+secondNumber + "</p>";
+  divSumaIngreso.innerHTML = "<p> -Ingresos Bs: " +sumIngresos  + "</p>";
 });
 
 
