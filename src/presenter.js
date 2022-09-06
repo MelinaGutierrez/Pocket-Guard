@@ -22,13 +22,20 @@ form.addEventListener("submit", (event) => {
 
   const firstNumber = Number.parseInt(first.value);
   const secondNumber = second.value;
-
-  sumEgresos= sumEgresos + firstNumber;
-  div.innerHTML = div.innerHTML + "<p> -Egreso Bs: " +firstNumber + " Descripcion: "+secondNumber + "</p>";
-  divSumaEgreso.innerHTML = "<p> -Egresos Bs: " +sumEgresos  + "</p>";
-
-  sumSaldo= sumIngresos-sumEgresos;
-  divSumaSaldo.innerHTML = "<p> -Saldo Bs: " +sumSaldo  + "</p>";
+  String(firstNumber);
+  console.log(firstNumber);
+  if(isNaN(firstNumber) || secondNumber==""){
+    alert("Ingrese el valor faltante");
+  }
+  else{
+    sumEgresos= sumEgresos + firstNumber;
+    div.innerHTML = div.innerHTML + "<p> -Egreso Bs: " +firstNumber + " Descripcion: "+secondNumber + "</p>";
+    divSumaEgreso.innerHTML = "<p> -Egresos Bs: " +sumEgresos  + "</p>";
+  
+    sumSaldo= sumIngresos-sumEgresos;
+    divSumaSaldo.innerHTML = "<p> -Saldo Bs: " +sumSaldo  + "</p>";
+  }
+ 
 });
 
 formIngreso.addEventListener("submit", (event) => {
