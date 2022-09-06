@@ -34,6 +34,9 @@ form.addEventListener("submit", (event) => {
   
     sumSaldo= sumIngresos-sumEgresos;
     divSumaSaldo.innerHTML = "<p> -Saldo Bs: " +sumSaldo  + "</p>";
+    if(sumSaldo<0){
+      document.getElementById("resultadoSaldo-div").style.color = "red";
+    }
   }
  
 });
@@ -54,6 +57,9 @@ formIngreso.addEventListener("submit", (event) => {
 
   sumSaldo= sumIngresos-sumEgresos;
   divSumaSaldo.innerHTML = "<p> -Saldo Bs: " +sumSaldo  + "</p>";
+  if(sumSaldo>0){
+    document.getElementById("resultadoSaldo-div").style.color = "green";
+  }
   }
 });
 
