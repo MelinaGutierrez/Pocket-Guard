@@ -20,11 +20,11 @@ var sumSaldo=0;
 form.addEventListener("submit", (event) => {
   event.preventDefault();
 
-  const firstNumber = Number.parseInt(first.value);
+  const firstNumber = Number(first.value);
   const secondNumber = second.value;
   String(firstNumber);
   console.log(firstNumber);
-  if(isNaN(firstNumber) || secondNumber==""){
+  if(firstNumber==0 || secondNumber==""){
     alert("Ingrese el valor faltante");
   }
   else{
@@ -41,14 +41,19 @@ form.addEventListener("submit", (event) => {
 formIngreso.addEventListener("submit", (event) => {
   event.preventDefault();
 
-  const firstNumber = Number.parseInt(firstIngreso.value);
+  const firstNumber = Number(firstIngreso.value);
   const secondNumber = secondIngreso.value;  
 
-  sumIngresos= sumIngresos + firstNumber;
+  if (firstNumber==0 || secondNumber==""){
+    alert("Ingrese el valor faltante");
+  }
+  else{
+    sumIngresos= sumIngresos + firstNumber;
   div.innerHTML =  div.innerHTML + "<p> -Ingreso Bs: " +firstNumber + " Descripcion: "+secondNumber + "</p>";
   divSumaIngreso.innerHTML = "<p> -Ingresos Bs: " +sumIngresos  + "</p>";
 
   sumSaldo= sumIngresos-sumEgresos;
   divSumaSaldo.innerHTML = "<p> -Saldo Bs: " +sumSaldo  + "</p>";
+  }
 });
 
