@@ -1,5 +1,3 @@
-//import sumar from "./sumador";
-
 const first = document.querySelector("#Monto");
 const second = document.querySelector("#Descripcion");
 const form = document.querySelector("#form-Egreso");
@@ -23,6 +21,10 @@ form.addEventListener("submit", (event) => {
   const firstNumber = Number(first.value);
   const secondNumber = second.value;
   String(firstNumber);
+<<<<<<< HEAD
+=======
+  console.log(firstNumber);
+>>>>>>> 68124ea6ad8d1bb0c0a6afe413bd9f1ac89a931b
   if(firstNumber==0 || secondNumber==""){
     alert("Ingrese el valor faltante");
   }
@@ -60,8 +62,14 @@ formIngreso.addEventListener("submit", (event) => {
 
   sumSaldo= sumIngresos-sumEgresos;
   divSumaSaldo.innerHTML = "<p> -Saldo Bs: " +sumSaldo  + "</p>";
+<<<<<<< HEAD
   if(sumSaldo>0){
     document.getElementById("resultadoSaldo-div").style.color = "green";
   }
   }
 });
+=======
+  }
+});
+
+>>>>>>> 68124ea6ad8d1bb0c0a6afe413bd9f1ac89a931b
