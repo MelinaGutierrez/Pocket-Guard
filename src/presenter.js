@@ -40,6 +40,9 @@ form.addEventListener("submit", (event) => {
     divSumaSaldo.innerHTML = "<p> -Saldo Bs: " +sumSaldo  + "</p>";
     if(sumSaldo<0){
       document.getElementById("resultadoSaldo-div").style.color = "red";
+    }
+    if(sumSaldo<0){
+      document.getElementById("resultadoSaldo-div").style.color = "red";
         //divSumaSaldo.fontcolor("red");
     }
   }
@@ -63,12 +66,18 @@ formIngreso.addEventListener("submit", (event) => {
   sumSaldo= sumIngresos-sumEgresos;
   divSumaSaldo.innerHTML = "<p> -Saldo Bs: " +sumSaldo  + "</p>";
 <<<<<<< HEAD
+<<<<<<< HEAD
   if(sumSaldo>0){
     document.getElementById("resultadoSaldo-div").style.color = "green";
   }
   }
 });
 =======
+=======
+  if(sumSaldo>0){
+    document.getElementById("resultadoSaldo-div").style.color = "green";
+  }
+>>>>>>> d0984098e82e4917eec5f428ec5910617cb6c31e
   }
 });
 
